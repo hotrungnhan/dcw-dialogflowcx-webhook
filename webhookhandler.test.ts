@@ -49,7 +49,7 @@ const sample: WebhookRequestV3 = {
 	text: "hook",
 	languageCode: "vi"
 };
-webhook.webHookRegister("webhook-test", (req) => {
+webhook.register("webhook-test", (req) => {
 	const fulfil = new FulfillmentResponseBuilder()
 		.addText(["from webhook"])
 		.build();

@@ -1,10 +1,15 @@
 {
   "name": "dcw-dialogflowcx-webhook-handler",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.js",
   "author": "Kudou Sterain <hotrungnhan29@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": " tsc"
+  },
   "dependencies": {
+    "@types/node": "^16.11.11",
     "typescript": "^4.5.2"
   }
 }
