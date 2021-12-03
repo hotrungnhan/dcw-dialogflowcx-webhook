@@ -1,4 +1,4 @@
-# DCW | Dialogflow-CX-Webhook Handler
+# DCW | Dialogflow-CX-Webhook
 
 ## Package for interation with dialog cx by webhook
 
