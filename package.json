@@ -1,6 +1,6 @@
 {
   "name": "dcw-dialogflowcx-webhook",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "author": "Kudou Sterain <hotrungnhan29@gmail.com>",
@@ -8,6 +8,9 @@
   "repository": {
     "url": "https://github.com/hotrungnhan/dcw-dialogflowcx-webhook"
   },
+  "files": [
+    "dist/"
+  ],
   "scripts": {
     "build": " tsc"
   },
@@ -24,5 +27,6 @@
     "dcw",
     "webhook",
     "dialog flow webhook"
-  ]
+  ],
+  "dependencies": {}
 }
