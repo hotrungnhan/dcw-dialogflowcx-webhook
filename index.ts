@@ -35,3 +35,4 @@ export type {
 	SentimentAnalysisResult
 };
 export { MergeBehavior, ParameterState, DialogFlowCXWebhook };
+export default DialogFlowCXWebhook;
