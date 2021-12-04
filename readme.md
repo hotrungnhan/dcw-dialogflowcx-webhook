@@ -47,8 +47,8 @@ var express = require("express");
 var router = express.Router();
 
 // middleware that is specific to this router
-router.post((req, res, next) => {
-	const resp = webhook.call(req.body);
+router.post(async (req, res, next) => {
+	const resp = await webhook.call(req.body);
 	res.json(resp);
 	next();
 });
