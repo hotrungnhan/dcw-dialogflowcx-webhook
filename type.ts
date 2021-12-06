@@ -94,6 +94,9 @@ interface SentimentAnalysisResult {
 	score: number;
 	magnitude: number;
 }
+interface Payload {
+	[key: string]: unknown;
+}
 export {
 	ParameterInfo,
 	PageInfo,
@@ -105,6 +108,8 @@ export {
 	FulfillmentResponse,
 	FulfillmentInfo,
 	IntentInfo,
-	IntentParameterValue
+	IntentParameterValue,
+	Payload
 };
+
 export { ParameterState, MergeBehavior };

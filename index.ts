@@ -15,10 +15,12 @@ import {
 	FulfillmentResponse,
 	IntentParameterValue,
 	IntentInfo,
-	SentimentAnalysisResult
+	SentimentAnalysisResult,
+	Payload
 } from "./type";
 import { MergeBehavior, ParameterState } from "./type";
 import { DialogFlowCXWebhook } from "./webhookhandler";
+import { FacebookPayload } from "./facebookpayload";
 export { FulfillmentResponseBuilder, WebhookResponseV3Builder };
 export { WebhookRequestV3, WebhookResponseV3 };
 export type {
@@ -32,7 +34,8 @@ export type {
 	FulfillmentResponse,
 	IntentParameterValue,
 	IntentInfo,
-	SentimentAnalysisResult
+	SentimentAnalysisResult,
+	Payload
 };
-export { MergeBehavior, ParameterState, DialogFlowCXWebhook };
+export { MergeBehavior, ParameterState, DialogFlowCXWebhook, FacebookPayload };
 export default DialogFlowCXWebhook;
