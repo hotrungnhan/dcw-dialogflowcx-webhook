@@ -1,5 +1,3 @@
-import { Builder } from "./builder";
-import { Payload } from "./type";
 type AttachmentType = "audio" | "video" | "image" | "file";
 interface Attachment {
 	type: "audio" | "video" | "image" | "file";
@@ -7,10 +5,10 @@ interface Attachment {
 		url: string;
 	};
 }
-interface FacebookPayload {
+interface FacebookMessengerPayload {
 	facebook: Attachment;
 }
-class FacebookPayload {
+class FacebookMessengerCustomPayload {
 	private static gen(type: AttachmentType, url: string) {
 		return {
 			facebook: {
@@ -19,19 +17,20 @@ class FacebookPayload {
 					url: url
 				}
 			}
-		};
+		} as FacebookMessengerPayload;
 	}
 	static getImage(url: string) {
-		return FacebookPayload.gen("image", url);
+		return FacebookMessengerCustomPayload.gen("image", url);
 	}
 	static getAudio(url: string) {
-		return FacebookPayload.gen("audio", url);
+		return FacebookMessengerCustomPayload.gen("audio", url);
 	}
 	static getFile(url: string) {
-		return FacebookPayload.gen("file", url);
+		return FacebookMessengerCustomPayload.gen("file", url);
 	}
 	static getVideo(url: string) {
-		return FacebookPayload.gen("video", url);
+		return FacebookMessengerCustomPayload.gen("video", url);
 	}
 }
-export { FacebookPayload };
+export { FacebookMessengerCustomPayload };
+export type { Attachment, AttachmentType, FacebookMessengerPayload };

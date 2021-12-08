@@ -6,6 +6,8 @@ import {
 	SessionInfo
 } from "./type";
 import { Builder } from "./builder";
+import { DialogflowPayloadBuilder } from "./DialogflowPayload";
+import { FacebookMessengerCustomPayload } from "./facebookpayload";
 
 interface WebhookResponseV3 {
 	// https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/WebhookResponse
@@ -38,11 +40,11 @@ class FulfillmentResponseBuilder extends Builder<FulfillmentResponse> {
 		});
 		return this;
 	}
-	addPayload(metadata: unknown) {
+	addPayload(
+		payload: DialogflowPayloadBuilder | FacebookMessengerCustomPayload | unknown
+	) {
 		this.data.messages.push({
-			payload: {
-				metadata: metadata
-			}
+			payload: payload
 		});
 		return this;
 	}

@@ -20,7 +20,23 @@ import {
 } from "./type";
 import { MergeBehavior, ParameterState } from "./type";
 import { DialogFlowCXWebhook } from "./webhookhandler";
-import { FacebookPayload } from "./facebookpayload";
+import { FacebookMessengerCustomPayload } from "./FacebookPayload";
+import {
+	Card,
+	Image,
+	Icon,
+	SuggestionChipOption,
+	InfoCard,
+	TextCard,
+	ImageCard,
+	ButtonCard,
+	ListCard,
+	ListDivider,
+	AccordionCard,
+	SuggestionChipCard,
+	DialogflowCustomPayload,
+	DialogflowPayloadBuilder
+} from "./DialogflowPayload";
 export { FulfillmentResponseBuilder, WebhookResponseV3Builder };
 export { WebhookRequestV3, WebhookResponseV3 };
 export type {
@@ -37,5 +53,22 @@ export type {
 	SentimentAnalysisResult,
 	Payload
 };
-export { MergeBehavior, ParameterState, DialogFlowCXWebhook, FacebookPayload };
+export { MergeBehavior, ParameterState, DialogFlowCXWebhook };
+export { FacebookMessengerCustomPayload };
+export {
+	Card,
+	Image,
+	Icon,
+	SuggestionChipOption,
+	InfoCard,
+	TextCard,
+	ImageCard,
+	ButtonCard,
+	ListCard,
+	ListDivider,
+	AccordionCard,
+	SuggestionChipCard,
+	DialogflowCustomPayload,
+	DialogflowPayloadBuilder
+};
 export default DialogFlowCXWebhook;
