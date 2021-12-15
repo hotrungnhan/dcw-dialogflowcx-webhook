@@ -7,7 +7,7 @@ import {
 } from "./type";
 import { Builder } from "./builder";
 import { DialogflowPayloadBuilder } from "./DialogflowPayload";
-import { FacebookMessengerCustomPayload } from "./facebookpayload";
+import { FacebookMessengerCustomPayload } from "./FacebookPayload";
 
 interface WebhookResponseV3 {
 	// https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/WebhookResponse
