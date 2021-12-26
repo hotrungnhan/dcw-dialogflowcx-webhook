@@ -18,11 +18,19 @@ interface WebhookResponseV3 {
 	targetPage?: string;
 	targetFlow?: string;
 }
-
 class FulfillmentResponseBuilder extends Builder<FulfillmentResponse> {
 	constructor() {
 		super();
 		this.data.messages = [];
+	}
+	addTextAndPayload(text: string[], payload: DialogflowPayloadBuilder | FacebookMessengerCustomPayload | unknown) {
+		this.data.messages.push({
+			text: {
+				text: text
+			},
+			payload: payload
+		});
+		return this;
 	}
 	addText(text: string[]) {
 		this.data.messages.push({
